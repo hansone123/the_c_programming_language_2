@@ -13,9 +13,10 @@ main() {
         do{
             temp_len = get_line(buf,MAX);
             length += temp_len;
-            printf("%s", buf);
+            if (length>80)
+                printf("%s", buf);
         }while(buf[temp_len] != '\n' && (temp_len == MAX));
-        if(length>0)
+        if(length>0 && length>80)
             printf ("\nline length:%ld\n", length);
     }
 }
