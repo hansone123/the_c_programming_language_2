@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+main() {
+
+    int c;
+    float count =0;
+    float resultCount[11] = {0};
+    while((c=getchar()) != EOF) {
+        ++count;
+        if (c >= 48 && c<=57) {
+            ++resultCount[c-48];
+        }else{
+            ++resultCount[10];
+        }
+    }
+
+    int i;
+    for(i=0; i<11;i++) {
+        double out = 100*resultCount[i]/count;
+        printf("'%d':%.2f%\n",i,out);
+    }
+}
