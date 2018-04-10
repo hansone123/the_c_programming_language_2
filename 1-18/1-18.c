@@ -4,7 +4,7 @@
 #define MAX 1000
 int get_line(char *, int);
 
-main() {
+int main() {
 
     int temp_len,length=1;
     char BUF[MAX];
@@ -18,6 +18,7 @@ main() {
         }while(temp_len == (MAX-1) && BUF[temp_len] !='\n');
 
     }
+    return 0;
 }
 
 int get_line(char *buf, int limit) {
